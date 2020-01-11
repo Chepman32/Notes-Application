@@ -9,4 +9,4 @@ return <div className={`alert alert-${alert.type || `warning`} alert-dismissible
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
-}
+} 
