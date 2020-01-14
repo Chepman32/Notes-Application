@@ -5,7 +5,13 @@ const Form = () => {
     const alert = useContext(AlertContext);
     const submitHandler = event => {
         event.preventDefault();
-        alert.show(value, "success")
+        if(value.trim()) {
+            alert.show("Заметка была создана", "success");
+            setValue(" ")
+        }
+        else {
+            alert.show("Введите текст заметки");
+        }
     }
     return (
         <form onSubmit={submitHandler}>
